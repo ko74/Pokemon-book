@@ -19,17 +19,8 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ data, onBack }) => {
         setDominantColor(color);
       }
     );
-  }, []);
-  useEffect(() => {
-    getDominantColor(
-      data?.sprites.other.dream_world.front_default ?? "",
-      (color) => {
-        setDominantColor(color);
-      }
-    );
   }, [data]);
 
-  console.log("Dominant color", dominantColor);
   const tabs: string[] = ["About", "Stats", "Similar"];
 
   return (
@@ -59,7 +50,7 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ data, onBack }) => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center py-10">
+      <div className="flex flex-col items-center py-10 mt-10">
         <h2 className="font-bold py-2">{data?.name}</h2>
 
         <div className="flex items-center gap-5">
