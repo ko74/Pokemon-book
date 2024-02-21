@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
 import clsx from "clsx";
-import { makeStyles } from "@mui/styles";
 
 export interface IModalProps {
   show: boolean;
@@ -21,7 +20,8 @@ function Modal({
   children,
   isCenter = false,
 }: IModalProps): JSX.Element | null {
-  const useStyles = makeStyles((_theme) => ({
+  
+  const useStyles = () => ({
     modalRoot: {
       height: "100%",
       width: "100%",
@@ -36,7 +36,8 @@ function Modal({
       height: isCenter ? "" : "100%",
       borderRadius: 0,
     },
-  }));
+  });
+  
   const classes = useStyles();
 
   const close = () => {
