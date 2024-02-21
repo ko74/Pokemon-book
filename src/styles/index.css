@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cash+Display+Variable&display=swap");
+
+body {
+  font-family: "Cash Display Variable", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.overlay {
+  background-image: url(../../public/img/noise.png);
+  background-position: center, center;
+  background-size: cover, cover;
+  background-blend-mode: lighten;
+  background-color: rgba(225, 225, 225, 0.6);
+}
