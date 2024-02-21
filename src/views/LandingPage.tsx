@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Search from "../components/Search";
 import { Link, useNavigate } from "react-router-dom";
-import { getPokemon } from "../api/requests";
 
 const LandingPage = () => {
-  const [pokemon, setPokemon] = useState<any>();
   const [searchString, setSearchString] = useState<string>("");
   const navigate = useNavigate();
   const handleSubmit = (param:string) => {
