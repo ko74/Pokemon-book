@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ThemeModalProps } from "../types";
 import { ThemeContext } from "../context/PokemonContext";
 

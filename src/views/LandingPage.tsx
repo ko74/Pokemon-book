@@ -5,11 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 const LandingPage = () => {
   const [searchString, setSearchString] = useState<string>("");
   const navigate = useNavigate();
-  const handleSubmit = (param:string) => {
-    setSearchString(param)
+  const handleSubmit = (param: string) => {
+    setSearchString(param);
     navigate("/list");
   };
 
+  console.log(searchString);
   return (
     <div className="h-screen w-full flex flex-col gap-5  items-center justify-center">
       <>
